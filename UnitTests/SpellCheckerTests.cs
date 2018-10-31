@@ -3,7 +3,7 @@
 	public sealed class SpellCheckerTests
     {
 		/*
-		 * Проверяем, что ответ от спеллчекера успешно записывается в массив структур SpellingError.
+		 * Check that the spellcheck's answer is passed correctly to the SpellingError's object.
 		 */
 	}
 }

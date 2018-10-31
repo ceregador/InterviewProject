@@ -45,13 +45,13 @@ namespace UnitTests
 		}
 
 		/*
-		 * Далее проверяем следующие сценарии:
-		 * 1. Метод контроллера Get должен возвращать 404, если соответствующее правило не найдено.
-		 * 2. Метод контроллера Test должен возвращать 400, если не передали параметр page.
-		 * 3. Метод контроллера Test должен возвращать 404, если правило для переданной page не найдено.
-		 * 4. Метод контроллера Test должен возвращать ожидаемый текстовый результат.
-		 * 5. Метод контроллера Delete должен возвращать 404, если соответствующее правило не найдено.
-		 * 6. Метод контроллера Delete должен обращаться к методу репозитория DeleteRule и возвращать 200.
+		 * Then we should check following scenarios:
+		 * 1. Controller's method Get returns 404 if the corresponding rule is not found.
+		 * 2. Controller's method Test returns 400 if 'page' parameter is missing.
+		 * 3. Controller's method Test returns 404 if the rule was not found for the corresponding page.
+		 * 4. Controller's method Test returns expected text result.
+		 * 5. Controller's method Delete returns 404 if the corresponding rule was not found.
+		 * 6. Controller's method Delete returns 200 and calls the corresponding method of DeleteRule repository.
 		*/
 	}
 }
