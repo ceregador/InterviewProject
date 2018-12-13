@@ -10,8 +10,15 @@ namespace InterviewProject
 			var document = new HtmlDocument();
 			document.LoadHtml(content);
 
-			return document.DocumentNode.SelectNodes(xPathRule)
-				.Aggregate(string.Empty, (current, node) => current + "\r\n" + node.InnerText);
+			var nodes = document.DocumentNode.SelectNodes(xPathRule);
+
+			string result;
+			if (nodes.Count == 1)
+				result = nodes[0].InnerText;
+			else
+				result = nodes.Aggregate(string.Empty, (current, node) => current + "\r\n" + node.InnerText);
+
+			return result;
 		}
 	}
 }

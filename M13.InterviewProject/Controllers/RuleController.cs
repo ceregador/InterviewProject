@@ -60,7 +60,7 @@ namespace InterviewProject.Controllers
 			var pageContent = await _agent.GetContent($"http://{page}");
 			var textResult = ContentFilter.Apply(pageContent, rule);
 
-			return new ObjectResult(textResult);
+			return new OkObjectResult(textResult);
 		}
 
 		[HttpDelete("delete")]
